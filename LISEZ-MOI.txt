@@ -1,0 +1,8 @@
+دفتر الثانية إعدادي - طريقة التثبيت
+1) في GitHub: أنشئ repo جديدا (مثلا: dafter-2ac).
+2) ارفع كل الملفات الموجودة في هذا المجلد (index.html, manifest.json, sw.js, icon-192.png, icon-512.png).
+3) Settings > Pages > Branch: main > Save.
+4) افتح الرابط في Chrome على الهاتف: https://mohamedrezzoug.github.io/dafter-2ac/
+5) قائمة Chrome (⋮) > "Installer l'application" / "Ajouter à l'écran d'accueil".
+بعد أول فتح، التطبيق كيخدم حتى بلا أنترنت (ما عدا التعرف على الكلام).
+الميكرو: قبل الإذن ملي يطلبو Chrome.
