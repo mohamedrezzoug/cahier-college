@@ -9,6 +9,7 @@
   --rule:#cfdaee; --rule-v:#e6d9ec; --margin:#c8513f; --accent:#2350a8; --on-accent:#ffffff;
   --ok:#1b7348; --ok-bg:#e2f3e9; --no:#9a4a12; --no-bg:#fbefe3; --hint:#6b5a12; --hint-bg:#fbf5dc;
   --line:#dde4ef; --chip:#edf1f8;
+  --c1:#2350a8; --c2:#c8513f; --c3:#1b8a6b; --c4:#d19a1c; --fill-a:#d9e4f8; --fill-s:#eef2f8; --sky:#d6ebfb; --earth:#4f8a5b; --water:#cfe6f5; --rock:#c9b79a; --crust:#a5927a; --mantle:#e8a35c; --core:#d9722e; --icore:#f2c94c; --magma:#e0592f;
   --f-disp:"Reem Kufi","Noto Naskh Arabic",system-ui,sans-serif;
   --f-ar:"Noto Naskh Arabic","Alegreya Sans",system-ui,sans-serif;
   --f-lat:"Alegreya Sans","Noto Naskh Arabic",system-ui,sans-serif;
@@ -18,12 +19,12 @@
   --paper:#0f1625; --sheet:#151e30; --ink:#e4eaf5; --soft:#9ba8bf;
   --rule:#233250; --rule-v:#2c2742; --margin:#e07a66; --accent:#86a9ff; --on-accent:#0f1625;
   --ok:#78d6a6; --ok-bg:#16301f; --no:#f0a86b; --no-bg:#35240f; --hint:#e6cf72; --hint-bg:#302810;
-  --line:#26324a; --chip:#1c2740; color-scheme:dark}}
+  --line:#26324a; --chip:#1c2740;  --c1:#86a9ff; --c2:#e07a66; --c3:#56c49e; --c4:#e8c862; --fill-a:#22355e; --fill-s:#1a2438; --sky:#1d3550; --earth:#3f7a4d; --water:#1d3a52; --rock:#6b5d48; --crust:#5a4c3a; --mantle:#9a6232; --core:#a3521f; --icore:#b89130; --magma:#c24a26; color-scheme:dark}}
 :root[data-theme="dark"]{
   --paper:#0f1625; --sheet:#151e30; --ink:#e4eaf5; --soft:#9ba8bf;
   --rule:#233250; --rule-v:#2c2742; --margin:#e07a66; --accent:#86a9ff; --on-accent:#0f1625;
   --ok:#78d6a6; --ok-bg:#16301f; --no:#f0a86b; --no-bg:#35240f; --hint:#e6cf72; --hint-bg:#302810;
-  --line:#26324a; --chip:#1c2740; color-scheme:dark}
+  --line:#26324a; --chip:#1c2740;  --c1:#86a9ff; --c2:#e07a66; --c3:#56c49e; --c4:#e8c862; --fill-a:#22355e; --fill-s:#1a2438; --sky:#1d3550; --earth:#3f7a4d; --water:#1d3a52; --rock:#6b5d48; --crust:#5a4c3a; --mantle:#9a6232; --core:#a3521f; --icore:#b89130; --magma:#c24a26; color-scheme:dark}
 html,body{background:var(--paper);color:var(--ink)}
 body{font-family:var(--f-ar);font-size:var(--fs,18px);line-height:1.75;
   padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 56px}
@@ -161,6 +162,41 @@ h3{font-family:var(--f-disp);font-weight:500;font-size:.95em;color:var(--soft);m
 .confirm{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:14px}
 .note{font-size:.8em;color:var(--soft);margin-top:22px}
 
+
+
+/* figures */
+.figw{margin:8px 0 12px;padding:10px;background:var(--sheet);border:1px solid var(--line);border-radius:12px;overflow-x:auto}
+.figli{display:block!important}
+.fig{display:block;width:100%;max-width:440px;height:auto;margin:0 auto}
+.figw figcaption{font-size:.82em;color:var(--soft);text-align:center;margin-top:6px;line-height:1.6}
+.fig .l{stroke:var(--ink);stroke-width:1.6;fill:none;stroke-linejoin:round;stroke-linecap:round}
+.fig .thin{stroke-width:1} .fig .thick{stroke-width:2.6} .fig .d{stroke-dasharray:5 4}
+.fig .a{stroke:var(--accent)} .fig .m{stroke:var(--margin)} .fig .grid{stroke:var(--line);stroke-width:1}
+.fig .fi{fill:var(--ink)} .fig .fa{fill:var(--accent)} .fig .fm{fill:var(--margin)}
+.fig .fov{fill:var(--accent);opacity:.55} .fig .fs{fill:var(--fill-s)} .fig .fs2{fill:var(--chip)} .fig .fa2{fill:var(--fill-a)}
+.fig .p1{fill:var(--c1)} .fig .p2{fill:var(--c2)} .fig .p3{fill:var(--c3)} .fig .p4{fill:var(--c4)} .fig .ls{stroke:var(--sheet);stroke-width:2}
+.fig text{font-family:var(--f-lat);font-size:13px;fill:var(--ink)}
+.fig .t.b{font-weight:700} .fig .t.s{font-size:11.5px} .fig .t.big{font-size:18px;font-weight:700}
+.fig .t.a{fill:var(--accent)} .fig .t.m{fill:var(--margin)} .fig .t.inv{fill:#fff}
+.fig .atO{fill:#d64541} .fig .atC{fill:#3a3f47} .fig .atN{fill:#3d6fd6} .fig .atH{fill:#ffffff}
+.fig .sun{fill:#f6c343} .fig .sky{fill:var(--sky)} .fig .earth{fill:var(--earth)} .fig .water{fill:var(--water)}
+.fig .rock{fill:var(--rock)} .fig .crust{fill:var(--crust)} .fig .ground{fill:var(--rock);opacity:.6} .fig .mantle{fill:var(--mantle)} .fig .core{fill:var(--core)} .fig .icore{fill:var(--icore)}
+.fig .magma{fill:var(--magma)} .fig .lava{stroke:var(--magma);fill:none;stroke-linecap:round}
+.fig .rk1{fill:var(--rock)} .fig .rk2{fill:var(--crust)} .fig .rk3{fill:var(--fill-a)}
+.fig .glass{fill:var(--fill-a);opacity:.85} .fig .glass2{fill:var(--chip)} .fig .hole{fill:var(--sheet)} .fig .shadow{fill:var(--ink);opacity:.18}
+.fig .flame{fill:#f39c34;opacity:.9} .fig .flameB{fill:#4f86e8} .fig .flameY{fill:#f4b63a}
+.fig .sR{stroke:#e53935}.fig .sO{stroke:#fb8c00}.fig .sY{stroke:#fdd835}.fig .sG{stroke:#43a047}.fig .sB{stroke:#1e88e5}.fig .sI{stroke:#3949ab}.fig .sV{stroke:#8e24aa}
+.fig .wP{stroke:#d64541;stroke-width:2.4} .fig .wN{stroke:#3d6fd6;stroke-width:2.4} .fig .wT{stroke:#3c9d4e;stroke-width:2.4;stroke-dasharray:8 4}
+.fig .stem{stroke:var(--c3)} .fig .petal{fill:var(--c2);opacity:.75} .fig .sepal{fill:none;stroke:var(--c3);stroke-width:2.4} .fig .pollen{fill:var(--c4)}
+/* nouveautés */
+.starbar{display:flex;align-items:center;justify-content:space-between;gap:10px;background:var(--hint-bg);color:var(--hint);border-radius:14px;padding:8px 16px;margin-top:8px}
+.starbar b{font-family:var(--f-math);font-size:1.15em}
+.quick{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:6px 0 4px}
+.quick .set{min-height:70px}.qi{display:flex;flex-direction:column;gap:2px;min-width:0}
+.set[disabled]{opacity:.55;cursor:default}
+.from{font-size:.75em;color:var(--margin);font-weight:600;margin-bottom:2px}
+.star{color:var(--hint);font-weight:700}
+@media (max-width:420px){.quick{grid-template-columns:1fr}}
 
 /* gap fill */
 .gap{line-height:2.4;font-weight:600;margin:0 0 12px;overflow-wrap:anywhere}
@@ -2197,6 +2233,326 @@ ADD("fr",[
 ["q","Ils sont …",["venus","venu","venues"],0,"Masculin pluriel."]]
 ]);
 </script>
+<script>// ===== Moteur de figures SVG (thème clair/sombre via classes CSS) =====
+const FIG={};
+const F=(()=>{
+  const r=v=>Math.round(v*10)/10;
+  const svg=(w,h,body,cap)=>'<figure class="figw"><svg class="fig" viewBox="0 0 '+w+' '+h+'" direction="ltr" role="img"'+(cap?' aria-label="'+cap.replace(/["`\[\]{}]/g,"")+'"':'')+'>'+body+'</svg>'+(cap?'<figcaption>'+(typeof fmt==="function"?fmt(cap):cap)+'</figcaption>':'')+'</figure>';
+  const ln=(x1,y1,x2,y2,c)=>'<line x1="'+r(x1)+'" y1="'+r(y1)+'" x2="'+r(x2)+'" y2="'+r(y2)+'" class="'+(c||"l")+'"/>';
+  const pl=(pts,c)=>'<polygon points="'+pts.map(p=>r(p[0])+","+r(p[1])).join(" ")+'" class="'+(c||"l")+'"/>';
+  const pll=(pts,c)=>'<polyline points="'+pts.map(p=>r(p[0])+","+r(p[1])).join(" ")+'" class="'+(c||"l")+'"/>';
+  const ci=(x,y,rad,c)=>'<circle cx="'+r(x)+'" cy="'+r(y)+'" r="'+r(rad)+'" class="'+(c||"l")+'"/>';
+  const el=(x,y,rx,ry,c)=>'<ellipse cx="'+r(x)+'" cy="'+r(y)+'" rx="'+r(rx)+'" ry="'+r(ry)+'" class="'+(c||"l")+'"/>';
+  const rc=(x,y,w,h,c,rr)=>'<rect x="'+r(x)+'" y="'+r(y)+'" width="'+r(w)+'" height="'+r(h)+'"'+(rr?' rx="'+rr+'"':'')+' class="'+(c||"l")+'"/>';
+  const pa=(d,c)=>'<path d="'+d+'" class="'+(c||"l")+'"/>';
+  const tx=(x,y,s,c,a)=>'<text x="'+r(x)+'" y="'+r(y)+'" class="'+(c||"t")+'" text-anchor="'+(a||"middle")+'" dominant-baseline="middle">'+s+'</text>';
+  const dot=(x,y,c)=>ci(x,y,3,c||"fi");
+  const arr=(x1,y1,x2,y2,c,hc)=>{const a=Math.atan2(y2-y1,x2-x1),s=8;
+    return ln(x1,y1,x2-Math.cos(a)*s*.6,y2-Math.sin(a)*s*.6,c||"l")+pl([[x2,y2],[x2-s*Math.cos(a-.4),y2-s*Math.sin(a-.4)],[x2-s*Math.cos(a+.4),y2-s*Math.sin(a+.4)]],hc||"fi")};
+  const mid=(A,B)=>[(A[0]+B[0])/2,(A[1]+B[1])/2];
+  const tick=(A,B,n,c)=>{const M=mid(A,B),dx=B[0]-A[0],dy=B[1]-A[1],L=Math.hypot(dx,dy),ux=dx/L,uy=dy/L,px=-uy*5,py=ux*5;let s="";
+    for(let i=0;i<(n||1);i++){const o=(i-((n||1)-1)/2)*4;s+=ln(M[0]+ux*o-px,M[1]+uy*o-py,M[0]+ux*o+px,M[1]+uy*o+py,c||"l")}return s};
+  const ra=(P,A,B,s)=>{s=s||10;const u=[(A[0]-P[0]),(A[1]-P[1])],v=[(B[0]-P[0]),(B[1]-P[1])],lu=Math.hypot(...u),lv=Math.hypot(...v);
+    const a=[P[0]+u[0]/lu*s,P[1]+u[1]/lu*s],b=[P[0]+v[0]/lv*s,P[1]+v[1]/lv*s],c=[a[0]+v[0]/lv*s,a[1]+v[1]/lv*s];return pll([a,c,b],"l thin")};
+  const lab=(P,s,dx,dy,c)=>tx(P[0]+(dx||0),P[1]+(dy||0),s,c||"t b");
+  // géométrie
+  const sub=(A,B)=>[A[0]-B[0],A[1]-B[1]],add=(A,B)=>[A[0]+B[0],A[1]+B[1]],mul=(A,k)=>[A[0]*k,A[1]*k];
+  const foot=(P,A,B)=>{const d=sub(B,A),t=((P[0]-A[0])*d[0]+(P[1]-A[1])*d[1])/(d[0]*d[0]+d[1]*d[1]);return add(A,mul(d,t))};
+  const circum=(A,B,C)=>{const d=2*(A[0]*(B[1]-C[1])+B[0]*(C[1]-A[1])+C[0]*(A[1]-B[1]));
+    const sq=P=>P[0]*P[0]+P[1]*P[1];return[(sq(A)*(B[1]-C[1])+sq(B)*(C[1]-A[1])+sq(C)*(A[1]-B[1]))/d,(sq(A)*(C[0]-B[0])+sq(B)*(A[0]-C[0])+sq(C)*(B[0]-A[0]))/d]};
+  const dist=(A,B)=>Math.hypot(A[0]-B[0],A[1]-B[1]);
+  const ext=(A,B,k)=>add(A,mul(sub(B,A),k)); // point sur (AB) au paramètre k
+  return{svg,ln,pl,pll,ci,el,rc,pa,tx,dot,arr,mid,tick,ra,lab,sub,add,mul,foot,circum,dist,ext,r};
+})();
+function figHtml(spec){if(!spec)return"";const sp=String(spec),ix=sp.indexOf(":"),n=ix<0?sp:sp.slice(0,ix),a=ix<0?"":sp.slice(ix+1);const f=FIG[n];if(!f)return"";try{return f(a?a.split("|"):[])}catch(e){return""}}
+
+// ===== Figures — Mathématiques =====
+(()=>{const {svg,ln,pl,pll,ci,el,rc,pa,tx,dot,arr,mid,tick,ra,lab,sub,add,mul,foot,circum,dist,ext}=F;
+const kv=a=>{const o={};(a||[]).forEach(s=>{const i=s.indexOf("=");if(i>0)o[s.slice(0,i)]=s.slice(i+1);else if(s)o[s]=true});return o};
+const chev=(A,B,c)=>{const M=mid(A,B),a=Math.atan2(B[1]-A[1],B[0]-A[0]),s=6;return pll([[M[0]-s*Math.cos(a-.6),M[1]-s*Math.sin(a-.6)],M,[M[0]-s*Math.cos(a+.6),M[1]-s*Math.sin(a+.6)]],c||"l")};
+
+// Barres de fractions : "n/d" ou "étiquette;n/d"
+FIG.bars=a=>{a=a.length?a:["3/4"];const long=a.some(s=>s.split(";")[0].length>5),W=long?210:240,X=long?120:80,H=26,G=16;let b="";
+  a.forEach((s,i)=>{const [lb,fr]=s.includes(";")?s.split(";"):[s,s];const [n,d]=fr.split("/").map(Number),y=10+i*(H+G),w=W/d;
+    for(let k=0;k<d;k++)b+=rc(X+k*w,y,w,H,k<n?"fa2 l":"fs l");b+=tx(X-12,y+H/2,lb,"t b","end")});
+  return svg(340,a.length*(H+G)+6,b)};
+FIG.fracEq=()=>FIG.bars(["3/4","1/2","2/4"]).replace("</svg>","</svg>")+"";
+FIG.fracAdd=()=>FIG.bars(["1/4 = 3/12;3/12","1/6 = 2/12;2/12","total;5/12"]);
+
+FIG.symax=()=>{let b=ln(170,10,170,190,"l d a")+tx(170,200,"(D)","t a");
+  const M=[80,70],Mp=[260,70],H=[170,70];b+=ln(M[0],M[1],Mp[0],Mp[1],"l thin")+ra(H,M,[170,10],9)+tick(M,H,1)+tick(H,Mp,1)+dot(...M)+dot(...Mp)+lab(M,"M",-12,-10)+lab(Mp,"M'",14,-10);
+  const T=[[60,120],[120,110],[95,175]],Tp=T.map(p=>[340-p[0],p[1]]);b+=pl(T,"fs l")+pl(Tp,"fs l");
+  ["A","B","C"].forEach((n,i)=>{b+=lab(T[i],n,i===0?-12:i===1?10:-8,i===2?12:-6)+lab(Tp[i],n+"'",i===0?14:i===1?-12:10,i===2?12:-6)});
+  return svg(340,210,b)};
+FIG.axes=()=>{let b="";
+  b+=rc(20,30,90,90,"fs l")+ln(65,20,65,130,"l d a")+ln(10,75,120,75,"l d a")+ln(14,24,116,126,"l d a")+ln(116,24,14,126,"l d a")+tx(65,150,"carré : 4 axes","t s");
+  b+=rc(140,45,100,60,"fs l")+ln(190,35,190,115,"l d a")+ln(130,75,250,75,"l d a")+tx(190,150,"rectangle : 2 axes","t s");
+  const P=[[270,120],[350,120],[310,51]];b+=pl(P,"fs l");P.forEach((p,i)=>{const o=mid(P[(i+1)%3],P[(i+2)%3]);b+=ln(...ext(p,o,-.25),...ext(p,o,1.3),"l d a")});b+=tx(310,150,"triangle : 3 axes","t s");
+  return svg(380,162,b)};
+FIG.fracMul=()=>{const X=70,Y=30,W=240,H=150;let b="";
+  for(let c=0;c<4;c++)for(let r=0;r<3;r++){const inC=c<3,inR=r<2;b+=rc(X+c*60,Y+r*50,60,50,inC&&inR?"fov l":inC||inR?"fa2 l":"fs l")}
+  b+=pa("M"+X+" "+(Y-8)+"h180","l a")+tx(X+90,Y-18,"3/4","t a b")+pa("M"+(X-8)+" "+Y+"v100","l m")+tx(X-24,Y+50,"2/3","t m b");
+  b+=tx(X+W/2,Y+H+20,"6 cases sur 12 : 6/12 = 1/2","t s");return svg(330,205,b)};
+
+FIG.triMid=a=>{const o=kv(a);const A=[170,25],B=[40,190],C=[300,190],I=mid(A,B),J=mid(A,C);let b=pl([A,B,C],"l");
+  b+=ln(...I,...J,"l a thick")+tick(A,I,1)+tick(I,B,1)+tick(A,J,2)+tick(J,C,2)+chev(I,J,"l a")+chev(B,C,"l");
+  if(o.K){const K=mid(B,C);b+=pl([I,J,K],"l a")+tick(B,K,3)+tick(K,C,3)+dot(...K)+lab(K,"K",0,14)}
+  [[A,"A",0,-12],[B,"B",-12,6],[C,"C",12,6],[I,"I",-14,0],[J,"J",14,0]].forEach(p=>{b+=dot(...p[0])+lab(p[0],p[1],p[2],p[3])});
+  if(o.BC)b+=tx(170,208,"BC = "+o.BC,"t m b");if(o.IJ)b+=tx(170,96,"IJ = "+o.IJ,"t a b");if(o.AC)b+=tx(258,96,"AC = "+o.AC,"t m b","start");if(o.AJ)b+=tx(252,70,"AJ = "+o.AJ,"t a b","start");if(o.AB)b+=tx(82,96,"AB = "+o.AB,"t m b","end");
+  if(o.par)b+=tx(170,224,"(IJ) ∥ (BC)","t s");
+  return svg(340,o.BC||o.par?232:212,b)};
+FIG.varignon=()=>{const A=[60,40],B=[260,25],C=[300,170],D=[40,190];const I=mid(A,B),J=mid(B,C),K=mid(C,D),L=mid(D,A);
+  let b=pl([A,B,C,D],"l")+ln(...A,...C,"l d")+pl([I,J,K,L],"l a thick");
+  [[A,"A",-10,-8],[B,"B",8,-8],[C,"C",12,4],[D,"D",-12,6],[I,"I",0,-12],[J,"J",14,0],[K,"K",0,14],[L,"L",-14,0]].forEach(p=>{b+=dot(...p[0])+lab(p[0],p[1],p[2],p[3])});
+  return svg(340,205,b)};
+FIG.prio=()=>{let b="";const L=[["1","( )","parenthèses"],["2","× ÷","multiplier, diviser"],["3","+ −","additionner"]];
+  L.forEach((s,i)=>{const x=6+i*128;b+=rc(x,30,112,56,"fs l",10)+tx(x+56,52,s[1],"t big")+tx(x+56,74,s[2],"t s")+ci(x+12,30,11,"fa2 l")+tx(x+12,31,s[0],"t b");if(i<2)b+=arr(x+114,58,x+126,58)});
+  return svg(380,100,b)};
+const TRI=[[60,180],[290,180],[200,45]];
+const triBase=()=>{let b=pl(TRI,"fs l");[["A",-12,6],["B",12,6],["C",0,-12]].forEach((n,i)=>{b+=lab(TRI[i],n[0],n[1],n[2])});return b};
+FIG.mediatrices=()=>{const [A,B,C]=TRI,O=circum(A,B,C);let b=ci(O[0],O[1],dist(O,A),"l d")+triBase();
+  [[A,B],[B,C],[C,A]].forEach(([P,Q])=>{const M=mid(P,Q);b+=ln(...ext(M,O,-.35),...ext(M,O,1.25),"l a")+ra(M,P,O,8)+tick(P,M)+tick(M,Q)});
+  b+=dot(...O,"fa")+lab(O,"O",12,-8,"t a b");return svg(340,300,b,"Les médiatrices se coupent en O, centre du cercle circonscrit.")};
+FIG.hauteurs=()=>{const [A,B,C]=TRI,O=circum(A,B,C),H=sub(add(add(A,B),C),mul(O,2));let b=triBase();
+  [[A,B,C],[B,C,A],[C,A,B]].forEach(([P,Q,R])=>{const Hf=foot(P,Q,R);b+=ln(...P,...Hf,"l a")+ra(Hf,P,Q,8)});
+  b+=dot(...H,"fa")+lab(H,"H",12,-8,"t a b");return svg(340,200,b,"Les hauteurs se coupent en H, l'orthocentre.")};
+FIG.medianes=()=>{const [A,B,C]=TRI,G=[(A[0]+B[0]+C[0])/3,(A[1]+B[1]+C[1])/3];let b=triBase();
+  [[A,B,C],[B,C,A],[C,A,B]].forEach(([P,Q,R])=>{const M=mid(Q,R);b+=ln(...P,...M,"l a")+tick(Q,M)+tick(M,R)+dot(...M)});
+  b+=dot(...G,"fa")+lab(G,"G",14,-8,"t a b");return svg(340,200,b,"Les médianes se coupent en G, le centre de gravité.")};
+FIG.bissectrices=()=>{const [A,B,C]=TRI,a=dist(B,C),bb=dist(A,C),c=dist(A,B);const I=[(a*A[0]+bb*B[0]+c*C[0])/(a+bb+c),(a*A[1]+bb*B[1]+c*C[1])/(a+bb+c)];
+  const rIn=dist(I,foot(I,A,B));let b=ci(I[0],I[1],rIn,"l d")+triBase();
+  [[A,B,C,c,bb],[B,C,A,a,c],[C,A,B,bb,a]].forEach(([P,Q,R,pq,pr])=>{const D=add(mul(Q,pr/(pq+pr)),mul(R,pq/(pq+pr)));b+=ln(...P,...D,"l a")});
+  b+=dot(...I,"fa")+lab(I,"I",14,-6,"t a b");return svg(340,200,b,"Les bissectrices se coupent en I, centre du cercle inscrit.")};
+
+FIG.pow10=()=>{const L=[["10⁻²","0,01"],["10⁻¹","0,1"],["10⁰","1"],["10¹","10"],["10²","100"],["10³","1000"]];let b="";
+  L.forEach((s,i)=>{const x=6+i*58;b+=rc(x,14,54,58,i===2?"fa2 l":"fs l",6)+tx(x+27,34,s[0],"t big")+tx(x+27,58,s[1],"t s")});
+  b+=arr(40,90,330,90,"l a","fa")+tx(185,106,"× 10 à chaque case","t s a");return svg(360,116,b)};
+FIG.distrib=()=>{let b="";const X=60,Y=24;b+=rc(X,Y,140,70,"fa2 l")+rc(X+140,Y,90,70,"fs2 l")+tx(X+70,Y+35,"k × a","t b")+tx(X+185,Y+35,"k × b","t b")+tx(X-14,Y+35,"k","t m b")+tx(X+70,Y-10,"a","t a b")+tx(X+185,Y-10,"b","t a b");
+  const Y2=140;b+=rc(X,Y2,140,60,"fa2 l")+rc(X+140,Y2,90,60,"fs2 l")+rc(X,Y2+60,140,40,"fs2 l")+rc(X+140,Y2+60,90,40,"fs l");
+  b+=tx(X+70,Y2+30,"a×c","t")+tx(X+185,Y2+30,"b×c","t")+tx(X+70,Y2+80,"a×d","t")+tx(X+185,Y2+80,"b×d","t")+tx(X+70,Y2-10,"a","t a b")+tx(X+185,Y2-10,"b","t a b")+tx(X-14,Y2+30,"c","t m b")+tx(X-14,Y2+80,"d","t m b");
+  return svg(320,250,b,"`k(a+b)=ka+kb` et `(a+b)(c+d)=ac+ad+bc+bd`")};
+FIG.trirectcercle=a=>{const o=kv(a);const I=[180,115],R=82,B=[I[0]-R,I[1]],C=[I[0]+R,I[1]],ang=-2.2,A=[I[0]+R*Math.cos(ang),I[1]+R*Math.sin(ang)];
+  let b=ci(...I,R,"l d")+pl([A,B,C],"fs l")+ln(...A,...I,"l a thick")+ra(A,B,C,10)+tick(B,I)+tick(I,C)+tick(A,I);
+  [[A,"A",-6,-12],[B,"B",-12,6],[C,"C",12,6],[I,"I",0,14]].forEach(p=>{b+=dot(...p[0])+lab(p[0],p[1],p[2],p[3])});
+  if(o.BC)b+=tx(180,215,"BC = "+o.BC,"t m b");if(o.AI)b+=tx(118,92,"AI = "+o.AI,"t a b","end");
+  return svg(360,o.BC?226:210,b)};
+FIG.rt=a=>{const o=kv(a);const A=[70,170],B=[70,45],C=[280,170];let b=pl([A,B,C],"fs l")+ra(A,B,C,12);
+  [[A,"A",-12,8],[B,"B",-12,-6],[C,"C",12,6]].forEach(p=>{b+=lab(p[0],p[1],p[2],p[3])});
+  if(o.AB)b+=tx(58,108,o.AB,"t a b","end");if(o.AC)b+=tx(175,186,o.AC,"t a b");if(o.BC)b+=tx(188,96,o.BC,"t m b","start");
+  if(o.ang)b+=pa("M"+(C[0]-34)+" "+C[1]+" A34 34 0 0 1 "+F.r(C[0]-34*Math.cos(.536))+" "+F.r(C[1]-34*Math.sin(.536)),"l m")+tx(C[0]-48,C[1]-12,o.ang,"t m s");
+  return svg(320,196,b)};
+FIG.pyth=()=>{const A=[150,220],B=[150,130],C=[270,220];let b="";
+  b+=pl([[60,130],[150,130],[150,220],[60,220]],"fs2 l")+pl([[150,220],[270,220],[270,340],[150,340]],"fs2 l")+pl([B,C,[360,100],[240,10]],"fa2 l");
+  b+=pl([A,B,C],"fs l")+ra(A,B,C,10)+tx(105,175,"AB² = 9","t b")+tx(210,282,"AC² = 16","t b")+tx(300,95,"BC² = 25","t b");
+  b+=lab(A,"A",-10,12)+lab(B,"B",-10,-8)+lab(C,"C",12,8)+tx(160,190,"3","t a")+tx(210,210,"4","t a")+tx(222,186,"5","t m");
+  return svg(380,350,b,"`9+16=25` : `AB²+AC²=BC²`")};
+FIG.cos=a=>{const o=kv(a);const B=[50,170],A=[270,170],C=[270,50];let b=pl([A,B,C],"fs l")+ra(A,B,C,12);
+  b+=pa("M"+(B[0]+40)+" "+B[1]+" A40 40 0 0 0 "+F.r(B[0]+40*Math.cos(.5))+" "+F.r(B[1]-40*Math.sin(.5)),"l m")+tx(B[0]+54,B[1]-12,"B̂","t m b");
+  b+=lab(A,"A",12,8)+lab(B,"B",-12,6)+lab(C,"C",12,-6);
+  b+=tx(160,188,o.AB?"AB = "+o.AB:"côté adjacent à B̂","t a s")+tx(150,92,o.BC?"BC = "+o.BC:"hypoténuse","t m s","end")+tx(262,128,o.AC?"AC = "+o.AC:"côté opposé","t s","end");
+  return svg(340,200,b,"`cos B = [[AB/BC]]` (adjacent ÷ hypoténuse)")};
+FIG.balance=a=>{const L=a[0]||"3x − 5",R=a[1]||"10";let b=tx(170,22,"=","t big")+ln(40,50,300,50,"l thick")+ln(170,50,170,165,"l")+pl([[170,160],[150,190],[190,190]],"fs l");
+  b+=ln(70,50,70,118,"l thin")+ln(270,50,270,118,"l thin")+pa("M25 118 h90 l-12 16 h-66 z","fs l")+pa("M225 118 h90 l-12 16 h-66 z","fs l");
+  b+=rc(32,82,76,34,"fa2 l",6)+tx(70,99,L,"t b")+rc(232,82,76,34,"fa2 l",6)+tx(270,99,R,"t b");
+  return svg(340,196,b,"Ce que je fais d'un côté, je le fais de l'autre.")};
+FIG.vect=()=>{const A=[50,140],B=[220,60];let b=arr(...A,...B,"l a thick","fa")+dot(...A)+lab(A,"A",-10,10)+lab(B,"B",10,-10);
+  b+=ln(...ext(A,B,-.2),...ext(A,B,1.25),"l d thin");b+=tx(236,120,"direction : (AB)","t s","start")+tx(236,140,"sens : de A vers B","t s","start")+tx(236,160,"longueur : AB","t s","start");
+  return svg(380,180,b)};
+FIG.transl=()=>{const T=[[40,150],[110,160],[70,100]],v=[170,-60],Tp=T.map(p=>add(p,v));let b=pl(T,"fs l")+pl(Tp,"fa2 l");
+  T.forEach((p,i)=>{b+=arr(...p,...Tp[i],"l d a","fa")});["M","N","P"].forEach((n,i)=>{b+=lab(T[i],n,i===1?10:-10,i===2?-10:10)+lab(Tp[i],n+"'",i===1?12:-12,i===2?-10:10)});
+  return svg(340,180,b,"Chaque point glisse avec le même vecteur.")};
+FIG.parallelo=()=>{const A=[60,150],B=[220,150],D=[290,60],C=[130,60];let b=pl([A,B,D,C],"fs l")+arr(...A,...B,"l a thick","fa")+arr(...C,...D,"l a thick","fa");
+  [[A,"A",-10,10],[B,"B",10,10],[D,"D",10,-10],[C,"C",-10,-10]].forEach(p=>{b+=lab(p[0],p[1],p[2],p[3])});
+  return svg(340,180,b,"{AB}`=`{CD} : `ABDC` est un parallélogramme.")};
+FIG.nl=a=>{const pts=(a.length?a:["-2=−2","-0.5=−1/2","0=0","0.75=3/4","1=1"]).map(s=>{const [v,l]=s.split("=");return[+v,l||v]});
+  const mn=Math.floor(Math.min(...pts.map(p=>p[0])))-1,mx=Math.ceil(Math.max(...pts.map(p=>p[0])))+1,X=v=>20+(v-mn)/(mx-mn)*320;let b=arr(10,70,350,70);
+  for(let v=mn;v<=mx;v++)b+=ln(X(v),64,X(v),76,"l thin")+(pts.some(p=>p[0]===v)?"":tx(X(v),90,String(v).replace("-","−"),"t s"));
+  pts.forEach(([v,l],i)=>{const y=i%2?22:46;b+=ln(X(v),y+8,X(v),64,"l thin a")+ci(X(v),70,5,"fa l")+tx(X(v),y,l,"t a b")});return svg(360,100,b)};
+FIG.tprop=a=>{const r1=(a[0]||"2,5").split(","),r2=(a[1]||"6,15").split(","),k=a[2]||"× 3",h1=a[3]||"",h2=a[4]||"";let b="";const X=h1?110:40,cw=70;
+  if(h1)b+=rc(10,20,100,40,"fs2 l")+tx(60,40,h1,"t s")+rc(10,60,100,40,"fs2 l")+tx(60,80,h2,"t s");
+  r1.forEach((v,i)=>{b+=rc(X+i*cw,20,cw,40,"fs l")+tx(X+i*cw+cw/2,40,v,"t b")+rc(X+i*cw,60,cw,40,"fs l")+tx(X+i*cw+cw/2,80,r2[i],"t b")});
+  const xe=X+r1.length*cw;b+=pa("M"+(xe+6)+" 40 C"+(xe+40)+" 40 "+(xe+40)+" 80 "+(xe+10)+" 80","l a")+pl([[xe+6,80],[xe+14,75],[xe+14,85]],"fa")+tx(xe+46,60,k,"t a b","start");
+  return svg(Math.max(320,xe+100),112,b)};
+FIG.batons=a=>{const d=(a[0]||"8:3,10:5,12:7,15:5").split(",").map(s=>s.split(":").map(Number)),mxv=Math.max(...d.map(x=>x[1]));let b=arr(40,170,330,170)+arr(40,170,40,16);
+  for(let v=0;v<=mxv;v++){const y=170-v*(140/mxv);b+=ln(36,y,330,y,"l grid")+tx(28,y,v,"t s","end")}
+  d.forEach(([x,v],i)=>{const cx=80+i*(240/d.length);b+=rc(cx-14,170-v*(140/mxv),28,v*(140/mxv),"fa l")+tx(cx,186,x,"t s")});
+  b+=tx(340,186,"note","t s","end")+tx(46,10,"effectif","t s","start");return svg(350,196,b)};
+FIG.pie=a=>{const d=(a[0]||"8:3,10:5,12:7,15:5").split(",").map(s=>s.split(":")),tot=d.reduce((s,x)=>s+ +x[1],0);let b="",ang=-Math.PI/2;const cx=110,cy=100,R=80;
+  d.forEach((x,i)=>{const fr=+x[1]/tot,a2=ang+fr*2*Math.PI,lg=fr>.5?1:0;
+    b+=pa("M"+cx+" "+cy+" L"+F.r(cx+R*Math.cos(ang))+" "+F.r(cy+R*Math.sin(ang))+" A"+R+" "+R+" 0 "+lg+" 1 "+F.r(cx+R*Math.cos(a2))+" "+F.r(cy+R*Math.sin(a2))+" Z","p"+(i%4+1)+" ls");
+    b+=rc(220,30+i*28,16,16,"p"+(i%4+1)+" ls")+tx(244,38+i*28,x[0]+" : "+Math.round(fr*360)+"°","t s","start");ang=a2});
+  return svg(340,200,b)};
+FIG.pyr=()=>{const P=[[60,200],[220,200],[280,160],[120,160]],S=[170,40],O=mid(P[0],P[2]);let b=pll([P[0],P[1],P[2]],"l")+ln(...P[0],...P[3],"l d")+ln(...P[3],...P[2],"l d");
+  b+=ln(...S,...P[0])+ln(...S,...P[1])+ln(...S,...P[2])+ln(...S,...P[3],"l d")+ln(...S,...O,"l d a")+dot(...O)+ra(O,S,P[1],8);
+  b+=lab(S,"S",0,-12)+tx(180,120,"h","t a b","start")+tx(140,214,"base","t s")+tx(240,96,"face latérale","t s","start");return svg(360,226,b,"`V=[[B×h/3]]`")};
+FIG.cone=()=>{const O=[170,195],S=[170,35];let b=pa("M70 195 A100 26 0 0 1 270 195","l d")+pa("M70 195 A100 26 0 0 0 270 195","l")+ln(...S,70,195)+ln(...S,270,195);
+  b+=ln(...S,...O,"l d a")+ln(...O,270,195,"l m")+dot(...O)+ra(O,S,[270,195],8)+lab(S,"S",0,-12)+tx(178,115,"h","t a b","start")+tx(220,208,"r","t m b")+tx(236,105,"génératrice","t s","start");
+  return svg(360,232,b,"`V=[[π×r²×h/3]]`")};
+})();
+
+// ===== Figures — Physique-chimie et SVT =====
+(()=>{const {svg,ln,pl,pll,ci,el,rc,pa,tx,dot,arr,mid,ra,lab,add,mul,sub,ext,dist}=F;
+const box=(x,y,w,h,s,c,sub2)=>rc(x,y,w,h,(c||"fs")+" l",8)+tx(x+w/2,y+h/2-(sub2?8:0),s,"t b")+(sub2?tx(x+w/2,y+h/2+10,sub2,"t s"):"");
+const flow=(items,y,w,gap,x0)=>{let b="";items.forEach((s,i)=>{const x=x0+i*(w+gap);b+=box(x,y,w,50,s[0],s[2]||"fs",s[1]);if(i<items.length-1)b+=arr(x+w+2,y+25,x+w+gap-2,y+25)});return b};
+const atom=(x,y,e,rad)=>ci(x,y,rad||16,"at"+e+" l")+tx(x,y+1,e,e==="H"?"t s b":"t s b inv");
+
+/* ---------- PHYSIQUE-CHIMIE ---------- */
+FIG.atmos=()=>{const c=[190,210];let b=ci(...c,140,"sky l")+ci(...c,100,"earth l")+ci(...c,134,"l d a");
+  b+=tx(190,170,"Terre","t b inv")+tx(190,96,"atmosphère (air)","t a b")+tx(310,40,"couche d'ozone","t s","start")+ln(306,46,282,118,"l thin");
+  return svg(420,214,b)};
+FIG.seringue=()=>{let b="";let sd=7;const rnd=()=>{sd=(sd*9301+49297)%233280;return sd/233280};[[14,"avant",120],[224,"après",70]].forEach(([x,t,len])=>{b+=rc(x,40,140,40,"l",4)+rc(x+140,52,14,16,"fi");
+  for(let i=0;i<12;i++)b+=ci(x+10+rnd()*(len-14),48+rnd()*24,2.5,"fa");
+  b+=rc(x+len,42,6,36,"fi")+ln(x+len+6,60,x+len+50,60,"l thick")+rc(x+len+50,46,6,28,"fi")+tx(x+70,100,t,"t b")});
+  b+=tx(200,124,"Le volume diminue, la pression augmente.","t s");return svg(400,136,b)};
+FIG.compoAir=()=>FIG.pie(["N₂ 78 %:78,O₂ 21 %:21,autres 1 %:1"]).replace(/ : \d+°/g,"");
+FIG.molecules=()=>{let b="";
+  b+=atom(30,50,"O")+atom(58,50,"O")+tx(44,90,"O₂","t b")+tx(44,108,"dioxygène","t s");
+  b+=atom(140,52,"O",18)+atom(118,70,"H",11)+atom(162,70,"H",11)+tx(140,100,"H₂O","t b")+tx(140,118,"eau","t s");
+  b+=atom(212,50,"O")+atom(242,50,"C")+atom(272,50,"O")+tx(242,90,"CO₂","t b")+tx(242,108,"dioxyde de carbone","t s");
+  b+=atom(340,50,"C")+atom(340,24,"H",11)+atom(340,76,"H",11)+atom(314,50,"H",11)+atom(366,50,"H",11)+tx(340,100,"CH₄","t b")+tx(340,118,"méthane","t s");
+  return svg(390,128,b)};
+FIG.feu=()=>{const A=[200,20],B=[60,200],C=[340,200];let b=pl([A,B,C],"fa2 l thick")+pa("M200 175 q-28 -36 0 -80 q6 26 18 30 q12 -18 4 -38 q30 30 8 88 z","flame l");
+  b+=tx(116,100,"combustible","t b","end")+tx(116,118,"(bois, butane…)","t s","end")+tx(284,100,"comburant","t b","start")+tx(284,118,"(dioxygène)","t s","start")+tx(200,218,"chaleur (énergie)","t b");
+  return svg(400,230,b,"Il faut les trois pour avoir une combustion.")};
+FIG.flammes=()=>{let b=pa("M90 160 q-40 -50 0 -120 q40 70 0 120 z","flameB l")+pa("M260 160 q-46 -50 -6 -125 q10 30 18 34 q18 -12 8 -30 q36 60 -20 121 z","flameY l");
+  b+=tx(90,178,"flamme bleue","t b")+tx(90,196,"combustion complète","t s")+tx(260,178,"flamme jaune","t b")+tx(260,196,"incomplète : suie, CO","t s");return svg(350,206,b)};
+FIG.reaction=()=>{let b=atom(40,50,"C")+tx(75,50,"+","t big")+atom(108,50,"O")+atom(136,50,"O")+arr(166,50,214,50)+atom(244,50,"O")+atom(272,50,"C")+atom(300,50,"O");
+  b+=tx(40,90,"carbone","t s")+tx(122,90,"dioxygène","t s")+tx(272,90,"dioxyde de carbone","t s");
+  b+=tx(40,118,"12 g","t a b")+tx(75,118,"+","t")+tx(122,118,"32 g","t a b")+tx(190,118,"=","t")+tx(272,118,"44 g","t a b");
+  return svg(340,132,b,"Les atomes et la masse se conservent.")};
+FIG.matieres=()=>{let b=rc(10,10,160,150,"fs2 l",10)+tx(90,32,"naturelles","t b")+["coton (plante)","laine (mouton)","bois (arbre)","cuir (animal)"].map((s,i)=>tx(90,62+i*24,s,"t s")).join("");
+  b+=rc(190,10,160,150,"fa2 l",10)+tx(270,32,"synthétiques","t b")+["plastique","nylon","polyester","(à partir du pétrole)"].map((s,i)=>tx(270,62+i*24,s,"t s")).join("");return svg(360,170,b)};
+FIG.pollution=()=>svg(390,90,flow([["Sources","usines, autos"],["Polluants","CO, SO₂, fumée","fa2"],["Effets","pluies acides"]],20,112,18,4));
+FIG.sources=()=>{let b=ci(50,70,30,"sun l")+tx(50,118,"Soleil","t b")+tx(50,134,"source primaire","t s");
+  b+=ci(190,70,20,"fs l")+tx(190,118,"Lune","t b")+tx(190,134,"objet diffusant","t s");
+  b+=el(320,70,22,13,"l")+ci(320,70,7,"fi")+tx(320,118,"œil","t b")+tx(320,134,"récepteur","t s");
+  b+=arr(84,70,166,70,"l a","fa")+arr(212,70,294,70,"l a","fa");return svg(360,144,b)};
+FIG.prisme=()=>{const P=[[150,30],[100,140],[200,140]];let b=pl(P,"glass l")+arr(10,90,122,90,"l thick")+tx(10,76,"lumière blanche","t s","start");
+  const cols=["sR","sO","sY","sG","sB","sI","sV"];cols.forEach((c,i)=>{b+=ln(178,92,340,60+i*14,c+" thick")});
+  ["rouge","orange","jaune","vert","bleu","indigo","violet"].forEach((s,i)=>{b+=tx(346,60+i*14,s,"t s","start")});return svg(400,160,b,"Le prisme décompose la lumière blanche : c'est la dispersion.")};
+FIG.propag=()=>{let b=ci(30,80,14,"sun l")+tx(30,110,"lampe","t s");[110,180,250].forEach(x=>{b+=rc(x-4,30,8,100,"fi")+rc(x-4,74,8,12,"hole")});
+  b+=ln(44,80,320,80,"l a d")+el(336,80,16,10,"l")+ci(336,80,5,"fi")+tx(336,110,"œil","t s");return svg(370,124,b,"Les trous alignés : la lumière se propage en ligne droite.")};
+FIG.faisceaux=()=>{let b="";const t=["convergent","divergent","parallèle"];
+  [0,1,2].forEach(i=>{const x=10+i*120;[-1,0,1].forEach(k=>{const y0=i===1?60:60+k*24,y1=i===0?60:60+k*24;b+=arr(x,y0,x+100,y1,"l a","fa")});b+=tx(x+50,112,t[i],"t s")});
+  return svg(370,124,b)};
+FIG.ombre=()=>{let b=ci(30,90,8,"sun l")+tx(30,112,"source","t s")+pa("M150 60 A30 30 0 0 1 150 120 Z","fs l")+pa("M150 60 A30 30 0 0 0 150 120 Z","fi")+ci(150,90,30,"l");
+  b+=ln(30,90,330,12.5,"l thin a")+ln(30,90,330,167.5,"l thin a")+rc(330,4,8,172,"fs l")+rc(330,12.5,8,155,"fi");
+  b+=tx(150,140,"ombre propre","t s")+tx(300,192,"ombre portée","t s");return svg(360,202,b)};
+FIG.eclipse=a=>{const sol=(a[0]||"soleil")==="soleil";let b=ci(40,90,34,"sun l")+tx(40,140,"Soleil","t s");
+  const P1=sol?[170,90]:[180,90],P2=sol?[300,90]:[300,90];
+  if(sol){b+=ci(170,90,9,"fs l")+tx(170,120,"Lune","t s")+ci(300,90,26,"earth l")+tx(300,130,"Terre","t s")+pl([[170,81],[170,99],[290,94],[290,86]],"shadow")}
+  else{b+=ci(180,90,26,"earth l")+tx(180,130,"Terre","t s")+ci(300,90,9,"fs l")+tx(300,112,"Lune","t s")+pl([[180,64],[180,116],[330,98],[330,82]],"shadow")}
+  b+=ln(40,56,(sol?170:180),sol?81:64,"l thin a")+ln(40,124,(sol?170:180),sol?99:116,"l thin a");
+  return svg(350,150,b,sol?"Éclipse de Soleil : la Lune est au milieu.":"Éclipse de Lune : la Terre est au milieu.")};
+FIG.chambre=()=>{let b=arr(30,140,30,60,"l a thick","fa")+tx(30,160,"objet","t s")+rc(130,40,180,120,"l")+ci(130,100,3,"hole l");
+  b+=ln(30,60,310,132,"l thin")+ln(30,140,310,68,"l thin")+arr(310,68,310,132,"l m thick","fm")+tx(330,100,"image renversée","t s","start");
+  return svg(430,170,b)};
+FIG.lentille=()=>{const O=[190,110],f=60,xo=O[0]-150,ho=40,xi=O[0]+100,hi=-26.7;let b=ln(10,110,370,110,"l thin");
+  b+=pa("M190 30 Q205 110 190 190 Q175 110 190 30 Z","glass l")+arr(190,46,190,30)+arr(190,174,190,190);
+  b+=arr(xo,110,xo,110-ho,"l a thick","fa")+arr(xi,110,xi,110-hi,"l m thick","fm");
+  b+=ln(xo,110-ho,190,110-ho,"l thin a")+ln(190,110-ho,xi,110-hi,"l thin a")+ln(xo,110-ho,xi,110-hi,"l thin a");
+  [[O[0]-f,"F"],[O[0]+f,"F'"],[O[0],"O"]].forEach(([x,s])=>{b+=dot(x,110)+tx(x+(s==="O"?10:0),124,s,"t b")});
+  b+=tx(xo,58,"objet","t s a")+tx(xi,152,"image","t s m");return svg(380,200,b)};
+FIG.lentilles=()=>{let b=pa("M90 20 Q118 90 90 160 Q62 90 90 20 Z","glass l")+tx(90,178,"convergente","t b")+tx(90,194,"bords minces","t s");
+  b+=pa("M240 20 h40 Q258 90 280 160 h-40 Q262 90 240 20 Z","glass l")+tx(260,178,"divergente","t b")+tx(260,194,"bords épais","t s");return svg(350,204,b)};
+FIG.oeil=()=>{let b=ci(200,100,80,"l")+pa("M128 72 Q120 100 128 128 Q138 100 128 72 Z","glass l")+pa("M252 40 A80 80 0 0 1 252 160","l m thick");
+  b+=ln(20,70,128,82,"l thin a")+ln(20,130,128,118,"l thin a")+ln(128,82,280,100,"l thin a")+ln(128,118,280,100,"l thin a")+dot(280,100,"fm");
+  b+=tx(110,40,"cristallin (lentille)","t s")+ln(110,48,127,72,"l thin")+tx(310,40,"rétine (écran)","t s m")+ln(300,48,268,62,"l thin")+tx(200,196,"","t s");return svg(380,190,b)};
+FIG.sinus=()=>{let b="";for(let i=0;i<=10;i++)b+=ln(20+i*32,20,20+i*32,180,"l grid");for(let j=0;j<=8;j++)b+=ln(20,20+j*20,340,20+j*20,"l grid");
+  b+=ln(20,100,340,100,"l thin");let d="";for(let x=0;x<=320;x+=4){d+=(x?"L":"M")+(20+x)+" "+F.r(100-60*Math.sin(x/128*2*Math.PI))}
+  b+=pa(d,"l a thick")+arr(20,192,148,192,"l m","fm")+arr(148,192,20,192,"l m","fm")+tx(84,206,"période T","t m s");
+  b+=arr(52,100,52,40,"l m","fm")+tx(58,30,"Umax","t m s","start");return svg(360,214,b)};
+FIG.install=()=>{let b=rc(10,40,60,50,"fs l",6)+tx(40,58,"compteur","t s")+tx(40,74,"kWh","t s");
+  b+=rc(90,40,60,50,"fs l",6)+tx(120,58,"disjonc-","t s")+tx(120,74,"teur","t s");
+  b+=ln(70,52,90,52,"wP thick")+ln(70,78,90,78,"wN thick");
+  b+=ln(150,52,350,52,"wP thick")+ln(150,78,350,78,"wN thick")+ln(150,104,350,104,"wT thick")+tx(356,52,"phase","t s","start")+tx(356,78,"neutre","t s","start")+tx(356,104,"terre","t s","start");
+  [200,280].forEach((x,i)=>{b+=ln(x,52,x,140,"wP")+ln(x+16,78,x+16,140,"wN")+ln(x+32,104,x+32,140,"wT")+rc(x-8,140,48,36,"fa2 l",6)+tx(x+16,158,i?"four":"lampe","t s")});
+  return svg(410,186,b,"Les appareils sont en dérivation : chacun reçoit 220 V.")};
+
+/* ---------- SVT ---------- */
+FIG.dorsale=()=>{let b=rc(0,40,380,40,"water")+tx(30,56,"océan","t s","start")+tx(190,18,"dorsale : le magma monte","t s m")+ln(190,26,190,66,"l thin m");
+  b+=pa("M0 80 L170 80 L190 70 L210 80 L380 80 L380 120 L0 120 Z","crust l")+ln(190,70,190,120,"l m thick");
+  b+=arr(160,100,90,100,"l thick","fi")+arr(220,100,290,100,"l thick","fi");
+  b+=pa("M190 230 C120 230 100 150 170 135","l d a")+pa("M190 230 C260 230 280 150 210 135","l d a")+arr(172,136,176,124,"l a","fa")+arr(208,136,204,124,"l a","fa")+tx(190,200,"courants de convection","t s a");
+  return svg(380,240,b,"Les plaques s'éloignent de la dorsale.")};
+FIG.seisme=()=>{let b=pa("M0 50 L380 50 L380 250 L0 250 Z","ground l")+ln(0,50,380,50,"l thick");
+  const Fo=[200,165];[28,55,80].forEach(r=>{b+=ci(...Fo,r,"l d a")});b+=pa("M"+Fo[0]+" "+(Fo[1]-10)+" l4 7 8 1 -6 5 2 8 -8 -4 -8 4 2 -8 -6 -5 8 -1 z","fm");
+  b+=ln(200,50,200,155,"l thin")+dot(200,50,"fm")+tx(200,34,"épicentre","t b m")+tx(236,170,"foyer","t b","start")+tx(370,110,"ondes sismiques","t s a","end");
+  return svg(380,252,b)};
+FIG.terre=()=>{let b=ci(130,110,100,"mantle l")+ci(130,110,54,"core l")+ci(130,110,26,"icore l")+pa("M130 10 A100 100 0 0 1 230 110","l thick");
+  b+=[["croûte",10,"230 70"],["manteau",60,"200 60"],["noyau externe",110,"170 95"],["noyau interne",160,"145 110"]].map(([s,y,p])=>{const [x2,y2]=p.split(" ");return ln(250,y+30,+x2,+y2,"l thin")+tx(256,y+30,s,"t s","start")}).join("");
+  return svg(380,220,b)};
+FIG.volcan=()=>{let b=pa("M20 200 L150 60 L190 60 L320 200 Z","rock l")+el(170,215,60,16,"magma l")+pa("M162 60 L162 200 L178 200 L178 60 Z","magma");
+  b+=pa("M178 64 Q230 110 250 180","lava thick")+pa("M165 50 q-20 -20 0 -34 q20 -14 30 0 q20 -4 16 16","l d")+tx(260,30,"cendres et gaz","t s","start");
+  b+=tx(170,242,"chambre magmatique","t s")+tx(50,110,"cheminée","t s","start")+ln(100,110,160,120,"l thin")+tx(110,50,"cratère","t s","end")+ln(112,50,150,60,"l thin")+tx(270,150,"coulée de lave","t s","start");
+  return svg(380,252,b)};
+FIG.textures=()=>{let b=ci(90,90,70,"l")+ci(270,90,70,"glass2 l");
+  for(let i=0;i<14;i++){const a=i*0.9,r=i<6?28:52,x=90+r*Math.cos(a),y=90+r*Math.sin(a);b+=pl([[x-14,y-10],[x+10,y-14],[x+16,y+6],[x-4,y+16],[x-16,y+4]],i%3?"fs2 l":"fa2 l")}
+  for(let i=0;i<40;i++){const x=220+((i*37)%100),y=40+((i*53)%100),a=(i*0.7);if(Math.hypot(x-270,y-90)<62)b+=ln(x,y,x+8*Math.cos(a),y+8*Math.sin(a),"l a")}
+  b+=tx(90,178,"granite : grands cristaux","t s")+tx(270,178,"basalte : petits cristaux","t s");return svg(360,190,b)};
+FIG.plis=()=>{let b="";["rk1","rk2","rk3"].forEach((c,i)=>{const o=i*22;b+=pa("M10 "+(120+o)+" Q95 "+(20+o)+" 180 "+(120+o)+" Q265 "+(220+o)+" 350 "+(120+o)+" L350 "+(142+o)+" Q265 "+(242+o)+" 180 "+(142+o)+" Q95 "+(42+o)+" 10 "+(142+o)+" Z",c+" l")});
+  b+=tx(95,30,"anticlinal (A)","t b")+tx(265,232,"synclinal (U)","t b");return svg(360,244,b)};
+FIG.failles=()=>{let b="";const blk=(x,n,n2,inv)=>{const d=inv?-18:18;return pl([[x,40],[x+70,40],[x+90,140],[x,140]],"rk1 l")+pl([[x+70,40+d],[x+150,40+d],[x+150,140+d],[x+90,140+d]],"rk2 l")+
+  (inv?arr(x-6,90,x+20,90)+arr(x+156,90,x+130,90):arr(x+20,90,x-6,90)+arr(x+130,90,x+156,90))+tx(x+75,180,n,"t b")+tx(x+75,198,n2,"t s")};
+  b+=blk(14,"faille normale","(étirement)",false)+blk(214,"faille inverse","(compression)",true);return svg(380,208,b)};
+FIG.subduction=()=>{let b=rc(0,40,180,30,"water")+pa("M0 70 L170 70 L330 210 L310 220 L150 85 L0 85 Z","crust l")+pa("M170 70 L200 40 L380 40 L380 110 L250 110 Z","rock l");
+  b+=pa("M230 40 l14 -24 14 24 z","rock l")+arr(60,78,140,78,"l thick","fi")+tx(60,100,"plaque océanique","t s")+tx(310,80,"continent","t s")+tx(244,8,"volcan","t s");return svg(380,226,b,"Subduction : la plaque océanique plonge.")};
+FIG.collision=()=>{let b=pa("M0 120 L150 120 L190 40 L230 120 L380 120 L380 170 L0 170 Z","rock l")+arr(40,145,120,145,"l thick","fi")+arr(340,145,260,145,"l thick","fi");
+  b+=tx(190,24,"montagne","t b")+tx(70,190,"continent","t s")+tx(310,190,"continent","t s");return svg(380,200,b,"Collision : deux continents se rencontrent.")};
+FIG.cycle=a=>{const items=(a.length?a:["œuf","têtard","jeune grenouille","grenouille adulte"]);const n=items.length,cx=180,cy=110,R=78;let b="";
+  items.forEach((s,i)=>{const t=-Math.PI/2+i*2*Math.PI/n,x=cx+R*Math.cos(t),y=cy+R*Math.sin(t);b+=rc(x-58,y-16,116,32,"fs l",16)+tx(x,y,s,"t s b");
+    const t2=t+Math.PI/n,x2=cx+(R-14)*Math.cos(t2),y2=cy+(R-14)*Math.sin(t2),t3=t2+0.25;b+=arr(x2,y2,cx+(R-14)*Math.cos(t3),cy+(R-14)*Math.sin(t3),"l a","fa")});
+  return svg(360,220,b)};
+FIG.fleur=()=>{let b=pa("M180 230 L180 150","stem thick")+pa("M180 150 Q120 140 100 70 Q150 80 180 150","petal l")+pa("M180 150 Q240 140 260 70 Q210 80 180 150","petal l");
+  b+=pa("M170 150 Q160 120 172 100 L188 100 Q200 120 190 150 Z","fs2 l")+ln(180,100,180,70,"l thick")+el(180,66,8,5,"fa l")+ci(180,140,4,"fa")+ci(176,130,3,"fa")+ci(185,128,3,"fa");
+  b+=ln(150,150,140,90,"l")+el(140,86,7,4,"pollen l")+ln(210,150,220,90,"l")+el(220,86,7,4,"pollen l")+pa("M150 158 Q180 170 210 158","sepal l");
+  b+=tx(60,40,"pétale","t s")+tx(120,96,"étamine","t s","end")+tx(220,40,"stigmate","t s","start")+ln(218,44,186,64,"l thin")+tx(260,132,"ovaire + ovules","t s","start")+ln(258,132,196,132,"l thin")+tx(250,170,"sépale","t s","start");
+  return svg(380,236,b,"Le pistil (au centre) et les étamines (pollen).")};
+FIG.steps=a=>{let b="";a.forEach((s,i)=>{const y=8+i*52;b+=rc(90,y,180,36,"fs l",18)+tx(180,y+18,s,"t s b");if(i<a.length-1)b+=arr(180,y+38,180,y+50)});return svg(360,a.length*52,b)};
+FIG.cycle28=()=>{let b="";for(let d=1;d<=28;d++){const x=10+(d-1)*12.5;b+=rc(x,40,11,30,d<=5?"p4 l thin":d===14?"fa l thin":"fs l thin")}
+  b+=tx(76,90,"règles (jours 1 à 5)","t s")+tx(10+13*12.5+5,26,"ovulation (14e jour)","t a b")+tx(180,110,"un cycle ≈ 28 jours","t s");return svg(370,120,b)};
+FIG.chromo=()=>{let b=ci(60,80,46,"fs2 l")+ci(60,80,18,"fa2 l")+tx(60,140,"cellule","t s")+arr(110,80,150,80);
+  b+=ci(200,80,40,"fa2 l")+pa("M188 60 q12 20 0 40 M212 60 q-12 20 0 40","l a thick")+tx(200,140,"noyau","t s")+arr(244,80,280,80);
+  b+=pa("M300 36 q20 44 0 88 M330 36 q-20 44 0 88","l m thick")+rc(296,62,38,10,"p2 l")+tx(315,140,"chromosome","t s")+tx(352,67,"gène","t s a","start");
+  return svg(390,152,b,"L'Homme a 46 chromosomes (23 paires).")};
+})();
+
+// ===== Où placer les figures =====
+// KF : figure affichée après la ligne n° k du cours.   XF : figure au-dessus des exercices dont la consigne contient le texte.
+const KF={
+math:{0:[[3,"fracEq"]],1:[[3,"fracAdd"]],2:[[1,"symax"],[3,"axes"]],3:[[0,"fracMul"]],4:[[2,"triMid:par"]],5:[[0,"prio"]],
+ 6:[[0,"mediatrices"],[1,"hauteurs"],[3,"medianes"],[4,"bissectrices"]],7:[[6,"pow10"]],8:[[1,"distrib"]],9:[[1,"trirectcercle"]],
+ 10:[[1,"pyth"]],11:[[2,"cos"]],12:[[4,"balance"]],13:[[0,"vect"],[2,"parallelo"],[3,"transl"]],14:[[2,"nl"]],
+ 15:[[0,"tprop:2,5|6,15|× 3|quantité|prix"]],16:[[3,"batons"],[4,"pie"]],17:[[0,"pyr"],[1,"cone"]]},
+pc:{0:[[0,"atmos"]],1:[[0,"seringue"],[5,"compoAir"]],2:[[4,"molecules"]],3:[[0,"feu"],[4,"flammes"]],4:[[4,"reaction"]],5:[[1,"matieres"]],
+ 6:[[2,"pollution"]],7:[[1,"sources"]],8:[[2,"prisme"]],9:[[0,"propag"],[2,"faisceaux"]],10:[[0,"ombre"],[1,"eclipse:soleil"],[2,"eclipse:lune"],[3,"chambre"]],
+ 11:[[0,"lentilles"],[5,"lentille"]],12:[[0,"oeil"]],13:[[3,"sinus"]],14:[[4,"install"]]},
+svt:{0:[[2,"dorsale"]],1:[[1,"seisme"],[5,"terre"]],2:[[0,"volcan"]],3:[[2,"textures"]],4:[[2,"plis"],[4,"failles"]],5:[[1,"subduction"],[2,"collision"]],
+ 6:[[5,"cycle"]],7:[[1,"fleur"]],8:[[2,"cycle28"],[4,"steps:fécondation|nidation dans l'utérus|grossesse (9 mois)|accouchement"]],9:[[1,"chromo"]]}};
+const XF=[
+["math",0,"Simplifie `[[12/18]]`","bars:12/18"],["math",0,"Dans `[[5/8]]`","bars:5/8"],["math",0,"Simplifie `[[−6/8]]`","bars:6/8"],
+["math",1,"`[[1/3]]+[[1/6]]`","bars:1/3|1/6"],["math",1,"`[[1/2]]+[[1/4]]`","bars:1/2|1/4"],["math",1,"`[[2/3]]−[[1/2]]`","bars:2/3|1/2"],["math",1,"`[[2/7]]+[[3/7]]`","bars:2/7|3/7"],
+["math",2,"axes de symétrie a un carré","axes"],["math",2,"médiatrice de `[AB]`","symax"],
+["math",4,"`BC=12 cm`","triMid:BC=12 cm|IJ=?"],["math",4,"`IJ=5 cm`","triMid:IJ=5 cm|BC=?"],["math",4,"`BC=8 cm`","triMid:BC=8 cm|IJ=?"],["math",4,"`IJ=7,5 cm`","triMid:IJ=7,5 cm|BC=?"],
+["math",4,"`AC=7 cm`","triMid:AC=7 cm|par"],["math",4,"`AJ=4 cm`","triMid:AJ=4 cm|par"],["math",4,"périmètre de `ABC`","triMid:K"],["math",4,"Range la démonstration","triMid:par"],
+["math",6,"médiane `[AM]`","medianes"],["math",6,"`AG=4 cm`","medianes"],["math",6,"`GM=2 cm`","medianes"],["math",6,"La hauteur issue","hauteurs"],["math",6,"Sa bissectrice","bissectrices"],
+["math",9,"hypoténuse mesure `14 cm`","trirectcercle:BC=14 cm"],["math",9,"`IB=6 cm`","trirectcercle"],["math",9,"`AI=7 cm`","trirectcercle:AI=7 cm|BC=?"],
+["math",9,"relative à l'hypoténuse mesure `6 cm`","trirectcercle:AI=6 cm|BC=?"],["math",9,"`AI=5 cm`, `BC=10 cm`","trirectcercle:AI=5 cm|BC=10 cm"],["math",9,"d'hypoténuse `10 cm`","trirectcercle:BC=10 cm|AI=?"],
+["math",10,"`AB=3 cm`, `AC=4 cm`","rt:AB=3|AC=4|BC=?"],["math",10,"`BC=13`, `AB=5`","rt:AB=5|AC=?|BC=13"],["math",10,"`AB=6`, `AC=8`","rt:AB=6|AC=8|BC=?"],["math",10,"`AB=5`, `AC=12`","rt:AB=5|AC=12|BC=?"],
+["math",10,"`BC=10`, `AB=6`","rt:AB=6|AC=?|BC=10"],["math",10,"`BC=17`, `AC=15`","rt:AB=?|AC=15|BC=17"],["math",10,"échelle de `5 m`","rt:AB=?|AC=3 m|BC=5 m"],
+["math",11,"`AB=4`, `BC=8`","cos:AB=4|BC=8"],["math",11,"`AB=3`, `BC=5`","cos:AB=3|BC=5"],["math",11,"`BC=10`, `cos B=0,5`","cos:BC=10|AB=?"],["math",11,"`cos B=0,8` et `BC=10`","cos:BC=10|AB=?"],["math",11,"`AB=5` et `cos B=0,5`","cos:AB=5|BC=?"],
+["math",12,"`x+5=12`","balance:x + 5|12"],["math",12,"`3x+4=19`","balance:3x + 4|19"],["math",12,"Résous `x−4=6`","balance:x − 4|6"],["math",12,"Résous `3x=−12`","balance:3x|−12"],
+["math",13,"translation de vecteur {AB} transforme `A`","vect"],["math",13,"parallélogramme. {AB}","parallelo"],
+["math",15,"Tableau : `2→6`","tprop:2,5|6,15|× ?"],["math",15,"Tableau : `3→12`","tprop:3,5|12,20|× ?"],
+["math",16,"Notes : `8`","batons"],["math",16,"Valeurs : `10` (3 fois)","batons:10:3,12:5,14:2"],
+["math",17,"base carrée de côté `3 cm`","pyr"],["math",17,"base rectangulaire","pyr"],["math",17,"base carrée de côté `6 cm`","pyr"],["math",17,"Cône : `r=3 cm`","cone"],["math",17,"Cône : `r=2 cm`","cone"],["math",17,"Cône : `r=1 cm`","cone"],
+["pc",1,"piston d'une seringue","seringue"],["pc",2,"molécule `CO₂`","molecules"],["pc",3,"triangle du feu","feu"],["pc",3,"Une bougie sous un verre","feu"],["pc",3,"éteindre un feu","feu"],
+["pc",9,"trois cartons troués","propag"],["pc",10,"rapproche la lampe","ombre"],["pc",11,"Un rayon parallèle à l'axe","lentille"],["pc",11,"passant par le foyer objet","lentille"],["pc",11,"Une lentille à bords minces","lentilles"],["pc",11,"Une lentille à bords épais","lentilles"],
+["pc",13,"motif occupe `4 div`","sinus"],["pc",13,"Sensibilité `2 V/div`","sinus"],["pc",13,"`T=0,02 s`","sinus"],
+["svt",2,"Relie chaque type à sa lave","volcan"],["svt",3,"Le granite se forme","textures"],["svt",4,"Relie.","plis"],["svt",4,"Une faille est","failles"],["svt",7,"Le pollen est produit","fleur"],["svt",7,"Les ___ produisent le pollen","fleur"],["svt",9,"Les chromosomes se trouvent","chromo"]
+];
+function applyFigs(){XF.forEach(([sid,li,sub,spec])=>{const S=SUBJ.find(s=>s.id===sid);if(!S||!S.L[li])return;S.L[li].x.forEach(E=>{if(String(E[1]).includes(sub))E.fig=spec})})}
+</script>
 <script>const UI={
 ar:{name:"دفتر الثانية إعدادي",subjects:"المواد",parents:"ركن الوالدين",choose:"اختر مادة",
  lead:"كل درس فيه 4 خطوات: أفهم، الكلمات، أتمرن، وركن الوالدين.",lessons:n=>n+" درس",exN:n=>n+" تمرين",
@@ -2221,7 +2577,7 @@ ar:{name:"دفتر الثانية إعدادي",subjects:"المواد",parents:
  pLead:"التقدم محفوظ في هذا الجهاز فقط.",stRead:"دروس مقروءة",stEx:"سلاسل منجزة",stOk:"صحيح من أول محاولة",
  tSub:"المادة",tRead:"مقروء",tEx:"سلاسل",reset:"مسح التقدم",confirmQ:"متأكد؟ غادي يتمسح كلشي.",yes:"نعم، امسح",no:"لا",
  note:"الدروس مرتبة حسب فهارس الكتب المدرسية التي أرسلتموها. المحتوى ملخص وتمارين مكتوبة خصيصا، وليس نسخة من الكتاب. التعرف على الكلام يستعمل خدمة المتصفح.",
- sizeL:["A","A+","A++"]},
+ mix:"تمرين مختلط",mixInfo:"10 تمارين من دروس مختلفة",errs:"مراجعة أخطائي",errsInfo:n=>n+" تمرين للمراجعة",errsNone:"ما كاين حتى خطأ للمراجعة",stars:"نجومي",starEarn:"ربحتي نجمة ⭐ على المجهود ديالك",readAll:"اسمع الدرس كاملا",stopAll:"وقف القراءة",fromL:(n,t)=>"الدرس "+n+" · "+t,sizeL:["A","A+","A++"]},
 fr:{name:"Cahier 2e année collège",subjects:"Matières",parents:"Espace parents",choose:"Choisir une matière",
  lead:"Chaque leçon a 4 étapes : Je comprends, Les mots, Je m'entraîne, Parents.",lessons:n=>n+" leçons",exN:n=>n+" exercices",
  back:"← Retour",st:["Je comprends","Les mots","Je m'entraîne","Parents"],
@@ -2245,12 +2601,12 @@ fr:{name:"Cahier 2e année collège",subjects:"Matières",parents:"Espace parent
  pLead:"La progression reste sur cet appareil.",stRead:"Leçons lues",stEx:"Séries faites",stOk:"Justes du 1er coup",
  tSub:"Matière",tRead:"Lues",tEx:"Séries",reset:"Effacer la progression",confirmQ:"Tout effacer ?",yes:"Oui, effacer",no:"Non",
  note:"Les leçons suivent les sommaires des manuels que vous avez envoyés. Le contenu est un résumé et des exercices rédigés pour l'application, pas une copie du manuel. La reconnaissance vocale utilise le service du navigateur.",
- sizeL:["A","A+","A++"]}};
+ mix:"Exercices mélangés",mixInfo:"10 exercices de leçons différentes",errs:"Revoir mes erreurs",errsInfo:n=>n+" exercices à revoir",errsNone:"Aucune erreur à revoir",stars:"Mes étoiles",starEarn:"Tu gagnes une étoile ⭐ pour ton effort",readAll:"Écouter toute la leçon",stopAll:"Arrêter la lecture",fromL:(n,t)=>"Leçon "+n+" · "+t,sizeL:["A","A+","A++"]}};
 
 const SET=8;
 let lang="ar",size=1,view={s:"home"};
 const KEY="dafter2ac-v3";
-let P={read:{},ex:{}};
+let P={read:{},ex:{},err:{},stars:0};
 function ls(k,v){try{if(v===undefined)return localStorage.getItem(k);localStorage.setItem(k,v)}catch(e){return null}}
 try{const s=ls(KEY);if(s)P=Object.assign(P,JSON.parse(s))}catch(e){}
 if(ls(KEY+"-lang")==="fr")lang="fr";
@@ -2346,7 +2702,7 @@ function render(){
   let h="";
   const nav=a=>'<nav class="nav"><button type="button" data-go="home" aria-current="'+(a==="home")+'">'+x.subjects+'</button><button type="button" data-go="parents" aria-current="'+(a==="parents")+'">'+x.parents+'</button></nav>';
   if(view.s==="home"){
-    h+=nav("home")+'<h2>'+x.choose+'</h2><p class="lead">'+x.lead+'</p><div class="subjects">';
+    h+=nav("home")+'<div class="starbar"><span>'+x.stars+'</span><b>⭐ '+(P.stars||0)+'</b></div><h2>'+x.choose+'</h2><p class="lead">'+x.lead+'</p><div class="subjects">';
     SUBJ.forEach(S=>{const st=sStats(S);
       h+='<button type="button" class="subj" data-subj="'+S.id+'"><span class="sym">'+S.sym+'</span><b>'+S.name[lang==="ar"?0:1]+'</b><span>'+x.lessons(st.n)+' · '+x.exN(st.all)+'</span><div class="bar"><i style="width:'+Math.round(st.nr/st.n*100)+'%"></i></div></button>'});
     h+='</div>';
@@ -2354,6 +2710,7 @@ function render(){
   else if(view.s==="subj"){
     const S=subj(view.id);let sec=null;
     h+='<button type="button" class="back" data-go="home">'+x.back+'</button><h2>'+S.name[lang==="ar"?0:1]+'</h2>';
+    const ne=Object.keys((P.err||{})[S.id]||{}).length;h+='<div class="quick"><button type="button" class="set" data-quiz="mix"><span class="qi"><b>🔀 '+x.mix+'</b><span>'+x.mixInfo+'</span></span></button><button type="button" class="set" data-quiz="err"'+(ne?'':' disabled')+'><span class="qi"><b>🔁 '+x.errs+'</b><span>'+(ne?x.errsInfo(ne):x.errsNone)+'</span></span></button></div>';
     h+='<div dir="'+(S.lang==="ar"?"rtl":"ltr")+'" class="content">';
     S.L.forEach((L,i)=>{
       if(L.s&&L.s!==sec){if(sec!==null)h+='</ol>';sec=L.s;h+='<h3>'+L.s+'</h3><ol class="lessons">'}
@@ -2371,7 +2728,8 @@ function render(){
     h+='<h2 dir="'+dir+'" class="content"><span class="num" style="margin-inline-end:8px">'+(view.i+1)+'</span>'+fmt(L.t)+'</h2>';
     h+='<div class="steps" role="tablist">'+x.st.map((n,k)=>'<button type="button" role="tab" data-step="'+k+'" aria-selected="'+(k===step)+'"><small>'+(k+1)+'</small>'+n+'</button>').join("")+'</div>';
     if(step===0){
-      h+='<div dir="'+dir+'" class="content"><div class="sheet"><ul class="keys">'+L.k.map((s,j)=>'<li><span class="t">'+fmt(s)+'</span>'+tools(s,S.lang,"k"+j)+recPanel("k"+j)+'</li>').join("")+'</ul></div></div>';
+      const kf=(KF[S.id]||{})[view.i]||[];if(canSpeak)h+='<div class="actions" style="margin:0 0 10px"><button type="button" class="btn ghost" data-readall>'+(view.reading?'⏹ '+x.stopAll:'🔊 '+x.readAll)+'</button></div>';
+      h+='<div dir="'+dir+'" class="content"><div class="sheet"><ul class="keys">'+L.k.map((s,j)=>'<li><span class="t">'+fmt(s)+'</span>'+tools(s,S.lang,"k"+j)+recPanel("k"+j)+'</li>'+kf.filter(f=>f[0]===j).map(f=>'<li class="figli">'+figHtml(f[1])+'</li>').join("")).join("")+'</ul></div></div>';
       h+='<div class="actions"><button type="button" class="btn" data-step="1">'+x.st[1]+arrow+'</button></div>';
     } else if(step===1){
       h+='<div dir="'+dir+'" class="content"><table class="gloss"><tbody>'+L.w.map((w,j)=>'<tr><td class="'+(S.lang==="ar"?"ar":"la")+'">'+esc(w[0])+'</td><td class="'+(/[؀-ۿ]/.test(w[1])?"ar":"la")+'" dir="auto">'+esc(w[1])+'</td></tr>').join("")+'</tbody></table></div>';
@@ -2381,6 +2739,11 @@ function render(){
     } else {
       h+='<div class="tip"><h4>'+x.tipH+'</h4><p>'+S.tip[lang==="ar"?0:1]+'</p></div><h3>'+x.autH+'</h3><ul class="advice">'+x.aut.map(a=>'<li>'+a+'</li>').join("")+'</ul>';
     }
+  }
+  else if(view.s==="quiz"){
+    const S=subj(view.id),dir=S.lang==="ar"?"rtl":"ltr";
+    h+='<button type="button" class="back" data-backsubj>'+x.back+'</button><h2>'+(view.mode==="err"?'🔁 '+x.errs:'🔀 '+x.mix)+'</h2><p class="lead">'+S.name[lang==="ar"?0:1]+'</p>';
+    h+='<div dir="'+dir+'" class="content">'+player(S)+'</div>';
   }
   else if(view.s==="parents"){
     let R0=0,E=0,O=0,TT=0,N=0;const rows=SUBJ.map(S=>{const st=sStats(S);R0+=st.nr;E+=st.ns;O+=st.ok;TT+=st.tot;N+=st.n;
@@ -2403,19 +2766,31 @@ function setsHtml(S,L){
   return h+'</div>';
 }
 
-/* ---- lecteur d'exercices ---- */
+/* ---- lecteur d'exercices (séries, mélange, erreurs) ---- */
 function newEx(){return{tried:[],done:false,hint:0,first:true,placed:[],ordCheck:null,mSel:null,mDone:[],mMiss:null,msg:null,gFill:[],gCheck:null}}
-function startSet(s){const L=subj(view.id).L[view.i];const [a,b]=setRange(L,s);view.g={set:s,a,b,k:a,e:newEx(),score:0,end:false,sh:null};resetRec()}
+function newG(list,extra){return Object.assign({list,pos:0,e:newEx(),score:0,end:false,sh:null},extra||{})}
+function startSet(s){const L=subj(view.id).L[view.i];const [a,b]=setRange(L,s);const list=[];for(let k=a;k<b;k++)list.push([view.i,k]);view.g=newG(list,{mode:"set",set:s});resetRec()}
+function startQuiz(mode){const S=subj(view.id);let list=[];
+  if(mode==="err")list=Object.keys((P.err||{})[S.id]||{}).map(k=>k.split(".").map(Number)).filter(([i,k])=>S.L[i]&&S.L[i].x[k]).slice(0,10);
+  else{const all=[];S.L.forEach((L,i)=>L.x.forEach((_,k)=>all.push([i,k])));let sd=(Date.now()%100000)+7;
+    for(let n=0;n<10&&all.length;n++){sd=(sd*9301+49297)%233280;list.push(all.splice(Math.floor(sd/233280*all.length),1)[0])}}
+  view={s:"quiz",id:S.id,mode};view.g=newG(list,{mode});resetRec()}
 function fullSentence(E){if(E[0]==="o")return E[2].join(" ");if(E[0]==="g"){const parts=E[1].split("___");return parts.map((p,i)=>p+(i<E[2].length?E[2][i]:"")).join("")}return E[1]}
-function player(S,L){
-  const x=t(),G=view.g;
-  if(G.end){const n=G.b-G.a,more=G.set<nSets(L)-1;
-    return '<div class="card end"><div class="big">'+G.score+' / '+n+'</div><p><b>'+x.endT(G.score,n)+'</b></p><p>'+x.endP+'</p><div class="actions" style="justify-content:center">'+
-      (more?'<button type="button" class="btn" data-set="'+(G.set+1)+'">'+x.nextSet+'</button>':'')+'<button type="button" class="btn ghost" data-again>'+x.again+'</button><button type="button" class="btn ghost" data-sets>'+x.toSets+'</button></div></div>'}
-  const E=L.x[G.k],st=G.e,type=E[0],seed=view.i*31+G.k;
-  let h='<div class="dots">';for(let i=G.a;i<G.b;i++)h+='<span class="dot'+(i<G.k?' done':i===G.k?' cur':'')+'"></span>';
-  h+='<span>'+x.set(G.set+1)+' · '+(G.k-G.a+1)+' / '+(G.b-G.a)+'</span></div>';
-  h+='<div class="card"><div class="kind">'+x.kinds[type]+'</div>';
+function cur(S){const G=view.g,[li,k]=G.list[G.pos];return{li,k,L:S.L[li],E:S.L[li].x[k]}}
+function player(S){
+  const x=t(),G=view.g,n=G.list.length;
+  if(!n)return '<div class="card end"><p>'+x.errsNone+'</p></div>';
+  if(G.end){const more=G.mode==="set"&&G.set<nSets(S.L[view.i])-1;
+    return '<div class="card end"><div class="big">'+G.score+' / '+n+'</div><p><b>'+x.endT(G.score,n)+'</b></p><p class="star">'+x.starEarn+'</p><p>'+x.endP+'</p><div class="actions" style="justify-content:center">'+
+      (more?'<button type="button" class="btn" data-set="'+(G.set+1)+'">'+x.nextSet+'</button>':'')+
+      (G.mode==="set"?'<button type="button" class="btn ghost" data-again>'+x.again+'</button><button type="button" class="btn ghost" data-sets>'+x.toSets+'</button>':'<button type="button" class="btn" data-quiz="'+G.mode+'">'+(G.mode==="err"?x.errs:x.mix)+'</button><button type="button" class="btn ghost" data-backsubj>'+x.toList+'</button>')+'</div></div>'}
+  const {li,k,L,E}=cur(S),st=G.e,type=E[0],seed=li*31+k;
+  let h='<div class="dots">';for(let i=0;i<n;i++)h+='<span class="dot'+(i<G.pos?' done':i===G.pos?' cur':'')+'"></span>';
+  h+='<span>'+(G.mode==="set"?x.set(G.set+1)+' · ':'')+(G.pos+1)+' / '+n+'</span></div>';
+  h+='<div class="card">';
+  if(G.mode!=="set")h+='<div class="from">'+x.fromL(li+1,fmt(L.t))+'</div>';
+  h+='<div class="kind">'+x.kinds[type]+'</div>';
+  if(E.fig)h+=figHtml(E.fig);
   if(type!=="g")h+='<div class="qrow"><p class="qtext">'+fmt(E[1])+'</p>'+(canSpeak?'<button type="button" class="say" data-say="'+esc(plain(E[1]))+'" data-sl="'+S.lang+'" aria-label="Écouter">'+SPK+'</button>':'')+'</div>';
   if(type==="q"||type==="vf"){
     const opts=type==="q"?E[2]:[x.vrai,x.faux],ans=type==="q"?E[3]:(E[2]?0:1);
@@ -2455,43 +2830,54 @@ function player(S,L){
   const steps=E[E.length-1].split(" | ");
   if(st.done){
     h+='<div class="feedback ok" role="status"><b>'+x.good+'</b>'+fmt(steps.join(" "))+'</div>';
-    if(type==="o"||type==="g"){const key="ex"+G.k,sent=fullSentence(E);
+    if(type==="o"||type==="g"){const key="ex"+li+"."+k,sent=fullSentence(E);
       h+='<div class="qrow" style="margin-top:12px;align-items:center"><span style="flex:1;font-size:.9em;color:var(--soft)">'+x.mic+'</span>'+tools(sent,S.lang,key)+'</div>'+recPanel(key)}
   }
   if(!st.done&&st.hint>0)h+='<div class="hint"><h4>'+x.helpH+'</h4><ol>'+steps.slice(0,st.hint).map(s=>'<li>'+fmt(s)+'</li>').join("")+'</ol></div>';
   h+='<div class="actions">';
   if(!st.done)h+='<button type="button" class="btn help" data-hint'+(st.hint>=steps.length?' disabled':'')+'>'+(st.hint?x.more:x.help)+'</button>';
-  else h+='<button type="button" class="btn" data-next>'+(G.k===G.b-1?x.finish:x.next)+'</button>';
+  else h+='<button type="button" class="btn" data-next>'+(G.pos===n-1?x.finish:x.next)+'</button>';
   h+='</div></div>';
   return h;
 }
-function solved(){const G=view.g;G.e.done=true;G.e.msg=null;if(G.e.first)G.score++}
+function errKey(){const S=subj(view.id),[li,k]=view.g.list[view.g.pos];return[S.id,li+"."+k]}
+function solved(){const G=view.g;G.e.done=true;G.e.msg=null;const [sid,key]=errKey();P.err=P.err||{};
+  if(G.e.first){G.score++;if(P.err[sid]&&P.err[sid][key]){delete P.err[sid][key];save()}}
+  else{(P.err[sid]=P.err[sid]||{})[key]=1;save()}}
 function miss(){view.g.e.first=false;view.g.e.msg="no"}
+
+/* lecture de toute la leçon */
+function readAll(){const S=subj(view.id),L=S.L[view.i];try{speechSynthesis.cancel();view.reading=true;
+  L.k.forEach((s,j)=>{const u=new SpeechSynthesisUtterance(plain(s));u.lang=S.lang==="ar"?"ar-SA":"fr-FR";u.rate=.85;if(j===L.k.length-1)u.onend=()=>{view.reading=false;render()};speechSynthesis.speak(u)});}catch(e){view.reading=false}render()}
 
 document.addEventListener("click",ev=>{
   const b=ev.target.closest("button");if(!b||b.disabled)return;const d=b.dataset;
   if(b.id==="bLang"){lang=lang==="ar"?"fr":"ar";ls(KEY+"-lang",lang);render();return}
   if(b.id==="bSize"){size=size%3+1;ls(KEY+"-size",size);render();return}
   if(d.say!=null){speak(d.say,d.sl);return}
+  if(d.readall!=null){if(view.reading){try{speechSynthesis.cancel()}catch(e){}view.reading=false;render()}else readAll();return}
   if(d.rec!=null){if(R.on&&R.key===d.rk){stopRec();return}startRec(d.rec,d.sl,d.rk);return}
   if(d.recstop!=null){stopRec();return}
-  const go=v=>{resetRec();view=v;render();scrollTo(0,0)};
+  const go=v=>{resetRec();try{if(view.reading)speechSynthesis.cancel()}catch(e){}view=v;render();scrollTo(0,0)};
   if(d.go){go({s:d.go});return}
   if(d.subj){go({s:"subj",id:d.subj});return}
   if(d.lesson!=null){go({s:"lesson",id:view.id,i:+d.lesson,step:0});return}
-  if(d.back!=null){go({s:"subj",id:view.id});return}
-  if(d.step!=null){resetRec();view.step=+d.step;view.g=null;render();scrollTo(0,0);return}
+  if(d.back!=null||d.backsubj!=null){go({s:"subj",id:view.id});return}
+  if(d.quiz){startQuiz(d.quiz);render();scrollTo(0,0);return}
+  if(d.step!=null){resetRec();try{if(view.reading)speechSynthesis.cancel()}catch(e){}view.reading=false;view.step=+d.step;view.g=null;render();scrollTo(0,0);return}
   if(d.reset!=null){view.confirm=true;render();return}
   if(d.nowipe!=null){view.confirm=false;render();return}
-  if(d.wipe!=null){P={read:{},ex:{}};save();view.confirm=false;render();return}
+  if(d.wipe!=null){P={read:{},ex:{},err:{},stars:0};save();view.confirm=false;render();return}
   if(d.set!=null){startSet(+d.set);render();scrollTo(0,0);return}
   if(d.sets!=null){resetRec();view.g=null;render();scrollTo(0,0);return}
-  const G=view.g;if(!G)return;const S=subj(view.id),L=S.L[view.i],E=L.x[G.k],st=G.e;
+  const G=view.g;if(!G||G.end||!G.list.length)return;const S=subj(view.id),{E}=cur(S),st=G.e;
   if(d.again!=null){startSet(G.set);render();return}
   if(d.hint!=null){st.hint++;render();return}
   if(d.next!=null){resetRec();
-    if(G.k<G.b-1){G.k++;G.e=newEx();G.sh=null}
-    else{G.end=true;const all=P.ex[S.id]=P.ex[S.id]||{};let e=all[view.i];if(!e||typeof e!=="object")e=all[view.i]={};e[G.set]=Math.max(e[G.set]??0,G.score);save()}
+    if(G.pos<G.list.length-1){G.pos++;G.e=newEx();G.sh=null}
+    else{G.end=true;P.stars=(P.stars||0)+1;
+      if(G.mode==="set"){const all=P.ex[S.id]=P.ex[S.id]||{};let e=all[view.i];if(!e||typeof e!=="object")e=all[view.i]={};e[G.set]=Math.max(e[G.set]??0,G.score)}
+      save()}
     render();scrollTo(0,0);return}
   if(d.opt!=null){const j=+d.opt,ans=E[0]==="q"?E[3]:(E[2]?0:1);if(j===ans)solved();else{st.tried.push(j);miss()}render();return}
   if(d.place!=null){st.placed.push(+d.place);st.ordCheck=null;st.msg=null;render();return}
@@ -2507,6 +2893,7 @@ document.addEventListener("click",ev=>{
     if(j===st.mSel){st.mDone.push(j);st.mSel=null;st.mMiss=null;st.msg=null;if(st.mDone.length===E[2].length)solved()}
     else{st.mMiss=j;miss()}render();return}
 });
+applyFigs();
 render();
 </script>
-<script>if("serviceWorker" in navigator){addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}))}</script></body></html>
+<script>if("serviceWorker" in navigator){addEventListener("load",()=>navigator.serviceWorker.register("sw.js").then(r=>r.update()).catch(()=>{}))}</script></body></html>
